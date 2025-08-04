@@ -33,7 +33,7 @@
                     <hr>
                     <p><a href="{{ route('logout') }}">Logout</a></p>
                     <hr>
-                    <p class="text-center"><a href="https://uweb95.de" target="_blank">&copy; Uweb95 {{ date('Y') }}</a>
+                    <p class="text-center"><a href="https://rak-interactive.com" target="_blank">&copy; Rak Interactive {{ date('Y') }}</a>
                     </p>
                 </div>
             </div>
