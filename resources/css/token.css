@@ -1,0 +1,56 @@
+.token {
+    .name {
+        @apply text-xl font-bold;
+    }
+
+    .entries {
+        table {
+            @apply w-full;
+
+            tbody {
+                tr {
+                    @apply cursor-pointer hover:bg-gray-600;
+
+                    td {
+                        @apply p-1;
+                    }
+
+                    &.unread {
+                        @apply font-bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .labels {
+        @apply flex;
+
+        .label {
+            @apply px-2 mx-1 rounded-full bg-gray-300 text-gray-700;
+        }
+    }
+
+    .modal {
+        @apply fixed inset-0 flex items-center justify-center z-50;
+        background-color: rgba(0,0,0,0.5);
+
+        .m-content {
+            @apply bg-white dark:bg-gray-800 rounded p-4 w-2/3;
+
+            >* {
+                @apply my-1;
+            }
+
+            pre {
+                @apply bg-gray-300 dark:bg-gray-700 p-2 rounded overflow-auto;
+
+                max-height: 400px;
+            }
+
+            .close-button {
+                @apply mt-4 bg-red-500 text-white px-4 py-2 rounded cursor-pointer float-end;
+            }
+        }
+    }
+}

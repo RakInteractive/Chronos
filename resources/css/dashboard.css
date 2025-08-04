@@ -1,0 +1,19 @@
+.dashboard {
+    @apply grid grid-cols-4 gap-4;
+
+    .card {
+        @apply bg-white dark:bg-gray-800 dark:text-white shadow-md rounded-md p-4;
+
+        .card-header {
+            @apply flex justify-between items-center;
+        }
+
+        .card-body {
+            @apply mt-4;
+        }
+
+        .card-footer {
+            @apply mt-4;
+        }
+    }
+}

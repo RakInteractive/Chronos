@@ -1,0 +1,35 @@
+*[class^="level-"] {
+    @apply inline-block px-2 rounded-full font-bold mx-1 align-middle;
+}
+
+.level-debug {
+    @apply bg-gray-300 dark:bg-gray-800 text-gray-700 dark:text-gray-300;
+}
+
+.level-info {
+    @apply bg-blue-300 dark:bg-blue-800 text-blue-700 dark:text-blue-300;
+}
+
+.level-notice {
+    @apply bg-green-300 dark:bg-green-800 text-green-700 dark:text-green-300;
+}
+
+.level-warning {
+    @apply bg-yellow-300 dark:bg-yellow-800 text-yellow-700 dark:text-yellow-300;
+}
+
+.level-error {
+    @apply bg-red-300 dark:bg-red-800 text-red-700 dark:text-red-300;
+}
+
+.level-critical {
+    @apply bg-red-500 dark:bg-red-900 text-red-100 dark:text-red-100;
+}
+
+.level-alert {
+    @apply bg-red-700 dark:bg-red-900 text-red-100 dark:text-red-100;
+}
+
+.level-emergency {
+    @apply bg-red-900 dark:bg-red-900 text-red-100 dark:text-red-100;
+}

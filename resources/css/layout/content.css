@@ -1,0 +1,7 @@
+.content {
+    @apply flex flex-col h-screen justify-between w-full dark:bg-gray-700 dark:text-white;
+
+    &.authenticated {
+        @apply  w-4/5 p-4;
+    }
+}

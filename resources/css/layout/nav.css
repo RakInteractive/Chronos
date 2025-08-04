@@ -1,0 +1,53 @@
+nav {
+    @apply z-40 w-1/5 h-screen;
+
+    .sidebar {
+        @apply h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 dark:text-gray-200;
+
+        > div {
+            @apply flex flex-col justify-between h-full;
+
+            div {
+                @apply space-y-2 font-medium;
+            }
+
+            p {
+                @apply relative;
+
+                span {
+                    @apply absolute top-2 right-2 px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full;
+                }
+
+                a {
+                    @apply block px-3 py-2 rounded-md transition-colors;
+
+                    &:hover {
+                        @apply bg-gray-100 dark:bg-gray-700;
+                    }
+
+                    &.active {
+                        @apply bg-gray-100 dark:bg-gray-700;
+                    }
+                }
+
+                ul {
+                    @apply space-y-2 pl-4;
+
+                    li {
+                        a {
+                            @apply block px-3 py-2 rounded-md transition-colors;
+
+                            &:hover {
+                                @apply bg-gray-100 dark:bg-gray-700;
+                            }
+
+                            &.active {
+                                @apply bg-gray-100 dark:bg-gray-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
