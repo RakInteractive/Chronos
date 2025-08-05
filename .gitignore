@@ -24,4 +24,13 @@ yarn-error.log
 
 # Project exclude paths
 /storage/app/
-/storage/framework/
+/storage/framework/*
+!/storage/framework/sessions/
+!/storage/framework/views/
+!/storage/framework/cache/
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
