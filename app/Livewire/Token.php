@@ -16,7 +16,7 @@ class Token extends Component {
             ->with('labels', $availableLabels);
     }
 
-    public function openLogEntryModal(int $logEntryId): void {
+    public function openLogEntryModal(string $logEntryId): void {
         $this->dispatch('openLogEntryModal', $logEntryId);
     }
 }

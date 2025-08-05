@@ -10,7 +10,7 @@ class LogEntry extends Component {
     public bool $open = false;
 
     #[On('openLogEntryModal')]
-    public function openLogEntryModal(int $logEntryId): void {
+    public function openLogEntryModal(string $logEntryId): void {
         $this->logEntry = \App\Models\LogEntry::find($logEntryId);
         $this->open = true;
         $this->logEntry->update(['read_at' => now()]);
