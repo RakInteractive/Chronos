@@ -20,7 +20,7 @@
             </div>
             <div>
                 <h3>Content:</h3>
-                <pre>{{ json_encode(json_decode($logEntry?->content ?? '', true), JSON_PRETTY_PRINT) }}</pre>
+                <pre>{{ formatJsonIfPossible($logEntry?->content ?? '')  }}</pre>
             </div>
             <div>
                 <h3>Context:</h3>
