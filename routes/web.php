@@ -15,3 +15,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', Dashboard::class)->middleware('auth')->name('dashboard');
 Route::get('/token/{token}', Token::class)->middleware('auth')->name('token');
+
+Route::prefix('manage')->middleware('auth')->group(function () {
+    Route::get('/tokens', \App\Livewire\Manage\Token::class)->name('manage.tokens');
+});

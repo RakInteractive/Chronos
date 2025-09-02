@@ -3,6 +3,10 @@
         @apply text-xl font-bold;
     }
 
+    .creation {
+        @apply my-4;
+    }
+
     .entries {
         table {
             @apply w-full;

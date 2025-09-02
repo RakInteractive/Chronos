@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('log_entries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('token_id')->constrained('tokens');
+            $table->foreignId('token_id')->constrained('tokens')->onDelete('cascade');
             $table->text('title');
             $table->longText('content');
             $table->enum('level', ['debug', 'info', 'notice', 'warning', 'error', 'critical', 'alert', 'emergency'])->default('info');

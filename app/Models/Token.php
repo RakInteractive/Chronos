@@ -26,6 +26,10 @@ class Token extends Model {
         return $this->hasMany(LogEntry::class);
     }
 
+    public function hooks(): HasMany {
+        return $this->hasMany(Hook::class);
+    }
+
     public function regenerate(): string {
         $this->update([
             'token' => Str::uuid()->toString(),

@@ -7,6 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <title>{{ $title ?? 'Title' }}</title>
+    @livewireStyles
 </head>
 <body>
 @if(auth()->check())
@@ -27,7 +28,7 @@
                 </div>
                 <div class="bottom">
                     <hr>
-                    <p><a href="#">Token</a></p>
+                    <p><a href="{{ route('manage.tokens') }}">Token</a></p>
                     <p><a href="#">Accounts</a></p>
                     <p><a href="#">Profile</a></p>
                     <hr>
@@ -43,5 +44,6 @@
 <div class="content {{ auth()->check() ? 'authenticated' : '' }}">
     {{ $slot }}
 </div>
+@livewireScripts
 </body>
 </html>

@@ -2,22 +2,23 @@
 
 namespace App\Livewire;
 
+use App\Models\LogEntry as LogEntryModel;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
 class LogEntry extends Component {
-    public \App\Models\LogEntry $logEntry;
+    public LogEntryModel $logEntry;
     public bool $open = false;
 
     #[On('openLogEntryModal')]
     public function openLogEntryModal(int $logEntryId): void {
-        $this->logEntry = \App\Models\LogEntry::find($logEntryId);
+        $this->logEntry = LogEntryModel::find($logEntryId);
         $this->open = true;
         $this->logEntry->update(['read_at' => now()]);
     }
 
     public function mount(): void {
-        $this->logEntry = new \App\Models\LogEntry();
+        $this->logEntry = new LogEntryModel();
     }
 
     public function closeModal(): void {
