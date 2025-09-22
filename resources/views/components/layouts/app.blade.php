@@ -29,6 +29,7 @@
                 <div class="bottom">
                     <hr>
                     <p><a href="{{ route('manage.tokens') }}">Token</a></p>
+                    <p><a href="{{ route('manage.addons') }}">Addons</a></p>
                     <p><a href="#">Accounts</a></p>
                     <p><a href="#">Profile</a></p>
                     <hr>

@@ -3,6 +3,7 @@
 @import './auth.css';
 @import './dashboard.css';
 @import './token.css';
+@import './addons.css';
 @import './misc/levels.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
