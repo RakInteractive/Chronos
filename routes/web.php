@@ -18,4 +18,5 @@ Route::get('/token/{token}', Token::class)->middleware('auth')->name('token');
 
 Route::prefix('manage')->middleware('auth')->group(function () {
     Route::get('/tokens', \App\Livewire\Manage\Token::class)->name('manage.tokens');
+    Route::get('/addons', \App\Livewire\Manage\Addons::class)->name('manage.addons');
 });
