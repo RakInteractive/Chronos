@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Services\AddonManagerService;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Schema;
 
 class AddonsServiceProvider extends ServiceProvider {
     public function register(): void {
@@ -13,6 +14,10 @@ class AddonsServiceProvider extends ServiceProvider {
     }
 
     public function boot(): void {
+        if (!Schema::hasTable('addons')) {
+            return;
+        }
+
         $manager = app(AddonManagerService::class);
 
         foreach ($manager->discoverProviders() as $provider) {
