@@ -38,3 +38,4 @@ yarn-error.log
 
 /addons/*
 !/addons/.gitkeep
+!/addons/README.md

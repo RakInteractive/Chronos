@@ -25,7 +25,7 @@ class Addon extends Model {
         ];
     }
 
-    public function getMetadata() {
+    public function getMetadataAttribute() {
         $path = base_path("addons/$this->slug/addon.json");
 
         if (is_file($path)) {
