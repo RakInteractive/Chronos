@@ -7,6 +7,7 @@
 
     </div>
     <div class="entries">
+        {{ $entries->links('vendor.pagination.tailwind') }}
         <table>
             <thead>
             <tr>
@@ -17,7 +18,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($token->logEntries()->orderBy('created_at', 'desc')->get() as $entry)
+            @foreach($entries as $entry)
                 <tr class="@if($entry->read_at == null) unread @endif" wire:click="openLogEntryModal({{ $entry->id }})">
                     <td>{{ $entry->created_at->format('H:i:s d.m.Y') }}</td>
                     <td>{{ $entry->title }}</td>
