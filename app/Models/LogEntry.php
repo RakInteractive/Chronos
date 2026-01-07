@@ -23,6 +23,11 @@ class LogEntry extends Model {
 
     protected static function boot(): void {
         parent::boot();
+
+        static::creating(function (LogEntry $logEntry) {
+            $logEntry->title = substr($logEntry->title, 0, 255);
+        });
+
         static::created(function (LogEntry $entry) {
             $hooks = $entry
                 ->token
